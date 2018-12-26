@@ -24,7 +24,8 @@ UOpenDoor::UOpenDoor()
 
 void UOpenDoor::OpenDoor()
 {
-	Owner->SetActorRotation(FRotator(0.f, OpenAngle, 0.0));
+	//Owner->SetActorRotation(FRotator(0.f, OpenAngle, 0.0));
+	OnOpenRequest.Broadcast();
 }
 
 void UOpenDoor::CloseDoor()
